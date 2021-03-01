@@ -90,13 +90,12 @@ Menu principal
 while True:
     printMenu()
     catalogo = loadBooks()
-    copy_list= lt.subList(catalogo['books'], 0, len(catalogo['books']))
+    copy_list= lt.subList(catalogo['books'], 1, len(catalogo['books']))
     sorted_list = copy_list.copy()
     inputs = input('Seleccione una opción para continuar\n')
     if int(inputs[0]) == 1:
         for book in lt.iterator(catalogo['books']):
             print(book['title']+"/"+ book['average_rating'])
-
     elif int(inputs[0]) == 2:
         sortFunction(catalogo, compareratings)
         for book in lt.iterator(catalogo['books']):
