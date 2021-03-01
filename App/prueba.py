@@ -37,15 +37,6 @@ operación solicitada
 """
 
 
-def printMenu():
-    print("Bienvenido")
-    print("1- Imprimir lista original")
-    print("2- Ordenar según average rating")
-    print("3- Ordenar según title")
-    print("4- Ordenar según average title")
-
-
-    print("0- Salir")
 
 
 def loadBooks():
@@ -80,9 +71,19 @@ def comparetitle(book1, book2):
 
 def compare_average_title(book1, book2):
     if(float(book1['average_rating']) != float(book2['average_rating'])):
-        return (float(book1['average_rating'] < book2['average_rating']))
+        return (float(book1['average_rating'] > book2['average_rating']))
     else:
         return (book1['title']>book2['title'])
+
+def printMenu():
+    print("Bienvenido")
+    print("1- Imprimir lista original")
+    print("2- Ordenar según average rating")
+    print("3- Ordenar según title")
+    print("4- Ordenar según average title")
+
+
+    print("0- Salir")
 
 """
 Menu principal
